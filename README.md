@@ -68,16 +68,35 @@ The optimized model is saved using pickle and deployed in a Django web app. User
     - Results, including the detected emotion, will be displayed on the webpage.
 
 ###### HOME PAGE
-![](https://github.com/KARTHIKA448/Emotion_Vibes/blob/main/outputs/home.png)
+![Home Page](https://github.com/KARTHIKA448/Emotion_Vibes/blob/main/outputs/home.png)
+
 ###### UPLOADING FILES
-![](https://github.com/KARTHIKA448/Emotion_Vibes/blob/main/outputs/uploadfile.png)
-![](https://github.com/KARTHIKA448/Emotion_Vibes/blob/main/outputs/file uploaded.png)
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://github.com/KARTHIKA448/Emotion_Vibes/blob/main/outputs/upload%20file.png" width="45%" />
+  <img src="https://github.com/KARTHIKA448/Emotion_Vibes/blob/main/outputs/file%20uploaded.png" width="45%" />
+</div>
 
 ###### PREDICTED EMOTIONS
+<div style="display: flex; justify-content: space-between;">
+  <div style="width: 45%; text-align: center;">
+    <p><strong>CALM</strong></p>
+    <img src="https://github.com/KARTHIKA448/Emotion_Vibes/blob/main/outputs/calm.png" width="80%" />
+  </div>
+  <div style="width: 45%; text-align: center;">
+    <p><strong>HAPPY</strong></p>
+    <img src="https://github.com/KARTHIKA448/Emotion_Vibes/blob/main/outputs/happy.png" width="80%" />
+  </div>
+</div>
 
-`CALM` 
-`HAPPY`
-`FEARFUL`
-`DISGUST'
+<div style="display: flex; justify-content: space-between;">
+  <div style="width: 45%; text-align: center;">
+    <p><strong>FEARFUL</strong></p>
+    <img src="https://github.com/KARTHIKA448/Emotion_Vibes/blob/main/outputs/fearful.png" width="80%" />
+  </div>
+  <div style="width: 45%; text-align: center;">
+    <p><strong>DISGUST</strong></p>
+    <img src="https://github.com/KARTHIKA448/Emotion_Vibes/blob/main/outputs/disgust.png" width="80%" />
+  </div>
+</div>
 
     
