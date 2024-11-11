@@ -67,5 +67,17 @@ The optimized model is saved using pickle and deployed in a Django web app. User
     - The model will process the audio and predict the emotion.
     - Results, including the detected emotion, will be displayed on the webpage.
 
+###### HOME PAGE
+![](https://github.com/KARTHIKA448/Emotion_Vibes/blob/main/outputs/home.png)
+###### UPLOADING FILES
+![](https://github.com/KARTHIKA448/Emotion_Vibes/blob/main/outputs/uploadfile.png)
+![](https://github.com/KARTHIKA448/Emotion_Vibes/blob/main/outputs/file uploaded.png)
+
+###### PREDICTED EMOTIONS
+
+`CALM` 
+`HAPPY`
+`FEARFUL`
+`DISGUST'
 
     
