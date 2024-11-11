@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Emotion Detection App</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        /* Container Styling */
+        .container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 90%;
+        }
+
+        /* Heading Styling */
+        h1 {
+            font-size: 2.5em;
+            color: #35424a;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px #e8491d;
+        }
+
+        h1 strong, h1 i, h1 u {
+            font-weight: bold;
+            font-style: italic;
+            text-decoration: underline;
+        }
+
+        /* Link Styling */
+        .start-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: #35424a;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .start-link:hover {
+            background-color: #e8491d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><strong><i><u>Emotion Detection App</u></i></strong></h1>
+        <p><a href="{% url 'predict_emotion' %}" class="start-link">Let's Predict the Emotion</a></p>
+    </div>
+</body>
+</html>

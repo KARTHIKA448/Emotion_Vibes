@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EchoMood - Emotion Detection Result</title>
+    <style>
+        /* Body and Container Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .result-container {
+            width: 90%;
+            max-width: 600px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 30px;
+            margin: 20px;
+        }
+
+        /* Heading Styling */
+        h1#heading {
+            font-size: 2em;
+            color: #35424a;
+            margin-bottom: 20px;
+        }
+
+        h1 span {
+            color: #e8491d;
+        }
+
+        /* Audio Player Styling */
+        .audio-container {
+            margin: 20px 0;
+        }
+
+        audio {
+            width: 100%;
+            max-width: 400px;
+            outline: none;
+            border-radius: 5px;
+        }
+
+        /* Center GIF Styling */
+        .gif-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        /* Back Link Styling */
+        .back-link {
+            display: inline-block;
+            padding: 12px 25px;
+            margin-top: 20px;
+            background: #35424a;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: #e8491d;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .result-container {
+                width: 95%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h1 id="heading">Predicted Emotion: <span><i>{{ emotion|capfirst }}</i></span></h1>
+
+        <div class="audio-container">
+            {% if audio_file_url %}
+                <audio controls>
+                    <source src="{{ audio_file_url }}" type="audio/wav">
+                    Your browser does not support the audio element.
+                </audio>
+            {% endif %}
+        </div>
+
+        <div class="gif-container">
+            {{ gif_embed_code|safe }}
+        </div>
+
+        <a href="{% url 'predict_emotion' %}" class="back-link">Predict Another Emotion</a>
+    </div>
+</body>
+</html>
